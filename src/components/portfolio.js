@@ -6,6 +6,7 @@ const Portfolio = () => {
   const addStock = (symbol, quantity) => {
     setStocks([...stocks, { symbol, quantity }]);
   };
+  
 
   const buyStock = (symbol, quantity) => {
     setStocks(stocks.map((stock) => {
