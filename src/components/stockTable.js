@@ -10,7 +10,7 @@ function StockTable({ stock }) {
             const res = await fetch(
                 `https://newsapi.org/v2/everything?q=${stock}&apiKey=6efd6f5a77c34e59b873cd51cde599ce`, {
                 headers: {
-                    referrer: "http://localhost:3000/",
+                    Referer: "http://localhost:3000/",
                     origin: "http://localhost:3000/"
                 }
             }
