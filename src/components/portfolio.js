@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { useTable } from "react-table";
+// 6efd6f5a77c34e59b873cd51cde599ce https://newsapi.org/register/success
 function StockTable() {
   const [stocks, setStocks] = useState([]);
   const [symbol, setSymbol] = useState('');
