@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { css, cx } from 'emotion';
+import { css } from '@emotion/css';
 
 const Portfolio = () => {
   const [stocks, setStocks] = useState([]);
