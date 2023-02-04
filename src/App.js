@@ -1,32 +1,25 @@
-import React, { useState } from 'react';
-import GoogleLogin from 'react-google-login';
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleGoogleLogin = (response) => {
-    setIsLoggedIn(true);
-    console.log('Google Login Successful', response);
-  };
-
+function App() {
   return (
-    <div>
-      {!isLoggedIn && (
-        <GoogleLogin
-          clientId="YOUR_GOOGLE_CLIENT_ID"
-          buttonText="Login with Google"
-          onSuccess={handleGoogleLogin}
-        />
-      )}
-
-      {isLoggedIn && (
-        <div>
-          <h1>Home Page</h1>
-          <p>Welcome to your portfolio tracker app!</p>
-        </div>
-      )}
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
