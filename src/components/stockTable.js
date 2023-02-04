@@ -11,6 +11,7 @@ function StockTable({ stock }) {
                 `https://newsapi.org/v2/everything?q=${stock}&apiKey=6efd6f5a77c34e59b873cd51cde599ce`, {
                 headers: {
                     Referer: "http://localhost:3000/",
+                    referer: "http://localhost:3000/",
                     origin: "http://localhost:3000/"
                 }
             }
