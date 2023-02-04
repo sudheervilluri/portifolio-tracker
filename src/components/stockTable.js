@@ -8,7 +8,10 @@ function StockTable({ stock }) {
   useEffect(() => {
     async function fetchNews() {
       const res = await fetch(
-        `https://newsapi.org/v2/everything?q=${stock}&apiKey=6efd6f5a77c34e59b873cd51cde599ce`
+        `https://newsapi.org/v2/everything?q=${stock}&apiKey=6efd6f5a77c34e59b873cd51cde599ce` , {
+            referrer : "http://localhost:3000/",
+            origin : "http://localhost:3000/"
+        }
       );
       const data = await res.json();
       setNews(data.articles);
