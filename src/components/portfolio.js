@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { css, cx } from 'emotion';
 
 const Portfolio = () => {
   const [stocks, setStocks] = useState([]);
@@ -6,7 +7,6 @@ const Portfolio = () => {
   const addStock = (symbol, quantity) => {
     setStocks([...stocks, { symbol, quantity }]);
   };
-  
 
   const buyStock = (symbol, quantity) => {
     setStocks(stocks.map((stock) => {
@@ -26,8 +26,43 @@ const Portfolio = () => {
     }));
   };
 
+  const portfolioStyles = css`
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: lightgray;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        &:hover {
+          background-color: gray;
+        }
+      }
+    }
+  `;
+
   return (
-    <div>
+    <div className={portfolioStyles}>
       <h1>Portfolio</h1>
       <button onClick={() => addStock('AAPL', 100)}>Add Stock</button>
       <ul>
